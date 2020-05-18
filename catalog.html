@@ -28,15 +28,15 @@
     <h2>Фильтр товаров</h2>
     <!-- Здесь будет форма фильтра -->
     <h3>Стоимость:</h3>
-    <!--Тут не знаю, как сделать ползунок, оформила пока что списком-->
-    <ul>
-      <li>
-        От 0
-      </li>
-      <li>
-        До 15000
-      </li>
-    </ul>
+    <!--Нашла такой код для ползунка-->
+    <div class="cost">
+      <input type="range" min="0" max="15000" value="0" class="slider" id="myRange">
+    <p>
+        От <input type="text" value="0">
+       
+        До <input type="text" value="15000">
+    </p>
+    </div>
     <h3>Сетка:</h3>
     <ul>
         <li>Адаптивная</li>
@@ -59,13 +59,19 @@
   <h3>Сортировать:</h3>
   <ul>
     <li>
-      По цене
+      <a href="#">По цене</a>
     </li>
     <li>
-      По типу
+      <a href="#">По типу</a>
     </li>
     <li>
-      По названию
+      <a href="#">По названию</a>
+    </li>
+    <li>
+      <button type="button">По убыванию</button>
+    </li>
+    <li>
+      <button type="button">По возрастанию</button>
     </li>
   </ul>
 </section>
@@ -76,9 +82,11 @@
           <a href="sedona.html">
               <img src="img/sedona.jpg" width="360" height="620" alt="Шаблон Седона">
           </a>
-          <p>
+          <div>
+            <h3>SEDONA</h3>
+            <p>Информационный сайт для туристов</p>
             <button type="button">9 900 ₽</button>
-          </p>
+          </div>
         </li>
         <li>
           <a href="pink.html">
@@ -133,16 +141,16 @@
     </ul>
     <ul>
       <li>
-        1
+        <a>1</a>
       </li>
       <li>
-        2
+        <a href="#">2</a>
       </li>
       <li>
-        3
+        <a href="#">3</a>
       </li>
       <li>
-        Следующая
+        <a href="#">Следующая</a>
       </li>
     </ul>
     
@@ -153,7 +161,8 @@
   <!--Здесь будет карта-->
   <div>
     <h3>Nërds design studio</h3>
-    <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>тел. +7 (812) 275-75-75</p>
+    <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
+    <p><a href="+78122757575">тел. +7 (812) 275-75-75</a></p>
     <button type="button">Напишите нам</button>
   </div>
 </section>
@@ -175,10 +184,10 @@
         </li>
       </ul>
     </section>
-    <section>
-      <h2>Давайте дружить, это выгодно!</h2>
+    <div>
+      <p>Давайте дружить, это выгодно!</p>
       <p>Скидка 10% для друзей из социальных сетей.</p>
-    </section>
+    </div>
   </footer>
   </body>
 </html>

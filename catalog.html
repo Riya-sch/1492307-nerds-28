@@ -110,10 +110,10 @@
             <a href="#">По названию</a>
           </li>
           <li>
-            <a href="#">По убыванию</a>
+            <span class="visually-hidden"><a href="#">По убыванию</a></span>
           </li>
           <li>
-            <a href="#">По возрастанию</a>
+            <span class="visually-hidden"><a href="#">По возрастанию</a></span>
           </li>
          </ul>
       </section>
@@ -211,24 +211,25 @@
             </article>
           </li>
         </ul>
-        <ul>
-          <li>
-            <a href="#">Предыдущая</a>
-          </li>
-          <li>
-            <a>1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          
-          <li>
-            <a href="#" class="disabled">Следующая</a>
-          </li>
-        </ul>
+        <nav aria-label="pagination navigation">
+          <ul>
+            <li>
+              <a href="/previous-page">Предыдущая</a>
+            </li>
+            <li>
+              <a href="/page-1">1</a>
+            </li>
+            <li>
+              <a href="/page-2">2</a>
+            </li>
+            <li>
+              <a href="/page-3">3</a>
+            </li>
+            <li>
+              <a href="/next-page" class="disabled">Следующая</a>
+            </li>
+          </ul>
+        </nav>
       </section>
 
       <section>
@@ -262,7 +263,7 @@
           </p>
         <button type="submit">Отправить</button>
         </form>
-        <button type="button" aria-label="Закрыть">х</button>
+        <button type="button" aria-label="Закрыть"></button>
       </section>
 
     </main>
@@ -272,13 +273,13 @@
         <h2 class="visually-hidden">Соцсети</h2>
         <ul>
           <li>
-            <a href="#" aria-label="Вконтакте"></a>
+            <a href="#" aria-label="Вконтакте">Vkontakte</a>
           </li>
           <li>
-            <a href="#" aria-label="Facebook"></a>
+            <a href="#" aria-label="Facebook">Facebook</a>
           </li>
           <li>
-            <a href="#" aria-label="Instagram"></a>
+            <a href="#" aria-label="Instagram">Instagram</a>
           </li>
         </ul>
       </section>

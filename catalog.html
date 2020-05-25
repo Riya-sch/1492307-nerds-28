@@ -30,13 +30,13 @@
           <fieldset>
             <legend><h3>Стоимость:</h3></legend>
             <div class="range">
-              <!--Ползунок-->
-              <p>
-                <input class="slider" name="cost-range" id="cost-range" type="range" min="0" max="15000" value="0">
-              </p>
+              <div>
+                <button type="button" aria-label="Левый ползунок"></button>
+                <button type="button" aria-label="Правый ползунок"></button>
+                <div><div></div></div>
+              </div>
             </div>
-            <div class="cost">
-              <!--Тут хотела сделать, чтобы можно было вписывать в поле только цифры от 0 до 15000. Попытка не очень удалась-->
+            <div class="range-cost">
               <p>
                 <label for="appointment-min-cost">От</label>
                 <input id="appointment-min-cost" type="number" min="0" max="15000" name="min-cost" placeholder="0" value="0">          

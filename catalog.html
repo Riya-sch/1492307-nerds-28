@@ -10,7 +10,7 @@
     
   <body>
 
-    <header>
+    <header class="header">
       <div class="inner">
         <nav class="main-navigation">
           <a class="main-header-logo" href="index.html">
@@ -20,11 +20,11 @@
             <ul class="site-navigation">
               <li><a href="blank.html">Студия</a></li>
               <li><a href="blank.html">Клиенты</a></li>
-              <li><a class="active" href="catalog.html">Магазин</a></li>
+              <li><a class="active-page" href="catalog.html">Магазин</a></li>
               <li><a href="blank.html">Контакты</a></li>
             </ul>
-            <div class="cart">
-              <a href="blank.html">Корзина</a>
+            <div>
+              <a class="cart" href="blank.html">Корзина</a>
             </div>
           </div>
           <h1>Магазин готовых шаблонов</h1>
@@ -32,7 +32,7 @@
       </div>
     </header>
 
-    <main class="content">
+    <main>
       <section class="filter">
         <div class="inner">
         <h2 class="visually-hidden">Фильтр товаров</h2>    
@@ -40,20 +40,22 @@
           <fieldset>
             <legend><h3>Стоимость:</h3></legend>
             <div class="range">
-              <div>
-                <button type="button" aria-label="Левый ползунок"></button>
-                <button type="button" aria-label="Правый ползунок"></button>
-                <div><div></div></div>
+              <div class="range-block">
+                <button class="range-left" type="button" aria-label="Левый ползунок"></button>
+                <button class="range-right" type="button" aria-label="Правый ползунок"></button>
+                <div class="range-line">
+                  <div class="range-green-line"></div>
+                </div>
               </div>
             </div>
             <div class="range-cost">
-              <p>
+              <p class="range-field">
                 <label for="appointment-min-cost">От</label>
-                <input id="appointment-min-cost" type="number" min="0" max="15000" name="min-cost" placeholder="0" value="0">          
+                <input class="min-cost" id="appointment-min-cost" type="number" min="0" max="15000" name="min-cost" placeholder="0" value="0">          
               </p>
-              <p>
+              <p class="range-field">
                 <label for="appointment-max-cost">До</label>
-                <input id="appointment-max-cost" type="number" min="0" max="15000" name="max-cost" placeholder="15000" value="15000">
+                <input class="max-cost" id="appointment-max-cost" type="number" min="0" max="15000" name="max-cost" placeholder="15000" value="15000">
               </p>
             </div> 
           </fieldset>
@@ -62,16 +64,16 @@
             <legend><h3>Сетка:</h3></legend>
             <ul>
               <li class="filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="option" value="adaptive" id="filter-adaptive" checked disabled>
-                <label for="filter-adaptive">Адаптивная</label>
+                <input class="radio-button-input filter-input" type="radio" name="option" value="adaptive" id="filter-adaptive" checked disabled>
+                <label class="radio-button-label" for="filter-adaptive">Адаптивная</label>
               </li>
               <li class="filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="option" value="fixed" id="filter-fixed">
-                <label for="filter-fixed">Фиксированная</label>               
+                <input class="radio-button-input filter-input" type="radio" name="option" value="fixed" id="filter-fixed">
+                <label class="radio-button-label" for="filter-fixed">Фиксированная</label>               
               </li>
               <li class="filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="option" value="rubber" id="filter-rubber">
-                <label for="filter-rubber">Резиновая</label>
+                <input class="radio-button-input filter-input" type="radio" name="option" value="rubber" id="filter-rubber">
+                <label class="radio-button-label" for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -80,28 +82,28 @@
             <legend><h3>Особенности:</h3></legend>
             <ul>
               <li class="filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked disabled>
-                <label for="filter-slider">Слайдер</label>
+                <input class="checkbox-input filter-input" type="checkbox" name="slider" id="filter-slider" checked disabled>
+                <label class="checkbox-label" for="filter-slider">Слайдер</label>
               </li>
               <li class="filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="filter-advantages">
-                <label for="filter-advantages">Блок преимуществ</label>
+                <label class="checkbox-label" for="filter-advantages">Блок преимуществ</label>
               </li>
               <li class="filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
-                <label for="filter-news">Новости</label>
+                <label class="checkbox-label" for="filter-news">Новости</label>
               </li>
               <li class="filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="gallery" id="filter-gallery">
-                <label for="filter-gallery">Галерея</label>
+                <label class="checkbox-label" for="filter-gallery">Галерея</label>
               </li>
               <li class="filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="basket" id="filter-basket">
-                <label for="filter-basket">Корзина</label>
+                <label class="checkbox-label" for="filter-basket">Корзина</label>
               </li>
              </ul>
           </fieldset>
-          <button class="filter-button" type="submit">Показать</button>
+          <button class="button filter-button" type="submit">Показать</button>
         </form>
         </div>        
       </section>
@@ -146,7 +148,7 @@
                 <div class="catalog-slider">
                   <h3><a href="#">Sedona</a></h3>
                   <p>Информационный сайт для туристов</p>
-                  <a class="price" href="#">9 900 ₽</a>
+                  <a class="button price-button" href="#">9 900 ₽</a>
                 </div>
               </article>          
             </li>
@@ -161,7 +163,7 @@
                 <div class="catalog-slider">
                   <h3><a href="#">Pink app</a></h3>
                   <p>Продуктовый лендинг приложения для iOS и Android</p>
-                  <a class="price" href="#">9 900 руб.</a>
+                  <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
             </li>
@@ -176,7 +178,7 @@
                 <div class="catalog-slider">
                   <h3><a href="#">Barbershop</a></h3>
                   <p>Сайт салона красоты. Для мужчин, да.</p>
-                  <a class="price" href="#">9 900 руб.</a>
+                  <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
             </li>
@@ -191,7 +193,7 @@
                 <div class="catalog-slider">
                   <h3><a href="#">Mishka</a></h3>
                   <p>Интернетмагазин вязаных игрушек</p>
-                  <a class="price" href="#">9 900 руб.</a>
+                  <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
             </li>
@@ -206,7 +208,7 @@
                 <div class="catalog-slider">
                   <h3><a href="#">A plus</a></h3>
                   <p>Лендинг курсов повышения квалификации</p>
-                  <a class="price" href="#">9 900 руб.</a>
+                  <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
             </li>
@@ -221,7 +223,7 @@
                 <div class="catalog-slider">
                   <h3><a href="#">Кваст</a></h3>
                   <p>Промо-сайт производителя крафтового кваса</p>
-                  <a class="price" href="#">9 900 руб.</a>
+                  <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
             </li>
@@ -231,7 +233,7 @@
               <li class="pagination-item">
                 <a href="/previous-page">Предыдущая</a>
               </li>
-              <li class="pagination-item pagination-item-current">
+              <li class="pagination-active">
                 <a href="/page-1">1</a>
               </li>
               <li class="pagination-item">
@@ -258,7 +260,7 @@
             <h3>Nërds design studio</h3>
             <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
             <p><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
-            <a class="feedback-link" href="#">Напишите нам</a>
+            <a class="button feedback-link" href="#">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -277,7 +279,7 @@
             <label for="message-field">Текст письма:</label>
             <textarea id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме"></textarea>
           </p>
-          <button type="submit" class="send-button">Отправить</button>
+          <button type="submit" class="button send-button">Отправить</button>
         </form>
         <button type="button" class="close-button" aria-label="Закрыть"></button>
       </section>

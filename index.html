@@ -9,10 +9,10 @@
   </head>
   <body>
 
-    <header>
+    <header class="header">
       <div class="inner">
         <nav class="main-navigation">
-          <a class="main-header-logo">
+          <a class="main-header-logo" href="index.html">
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Nerds»">
           </a>
           <div class="container">
@@ -22,15 +22,15 @@
               <li><a href="catalog.html">Магазин</a></li>
               <li><a href="blank.html">Контакты</a></li>
             </ul>
-            <div class="cart">
-              <a href="blank.html">Корзина</a>
+            <div>
+              <a class="cart" href="blank.html">Корзина</a>
             </div>
           </div>
         </nav>
       </div>
     </header>
 
-    <main class="container">
+    <main>
       <h1 class="visually-hidden">Дизайн-студия «Nerds»</h1>
         <section class="features">
           <div class="inner">
@@ -55,7 +55,7 @@
                 <img src="img/nerds-index-slide3.png" width="760" height="431" alt="Слайд 3">
               </li>
             </ul>
-            <div>
+            <div class="slider-switches">
               <span></span><span></span><span></span>
             </div>
           </div>
@@ -72,7 +72,7 @@
                 </p>
               <h3>Веб-сайты</h3>
                 <p class="service-text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                <a class="red" href="#">Заказать</a>
+                <a class="button button-red" href="#">Заказать</a>
               </article>
             </li>
         
@@ -83,7 +83,7 @@
                 </p>
                 <h3>Приложения</h3>
                 <p class="service-text">Покорите топ-10 приложений в AppStore и Google Play</p>
-                <a class="green" href="#">Заказать</a>
+                <a class="button button-green" href="#">Заказать</a>
               </article>
             </li>
         
@@ -94,7 +94,7 @@
                 </p>
                 <h3>Презентации</h3>
                 <p class="service-text">Вы даже не подозреваете, насколько вы изумительны!</p>
-                <a class="yellow" href="#">Заказать</a>
+                <a class="button button-yellow" href="#">Заказать</a>
               </article>
             </li>
            </ul>
@@ -130,18 +130,26 @@
             <h3>С 2004 года любим точность во всем:</h3>
             <table class="percent-list">
               <tr>
-                <th>
+                <th class="percent-item">
                   146<sup>%</sup>
-                  <p>Уровень самоотдачи</p>
                 </th>
-                <th>
+                <th class="percent-item">
                   100<sup>%</sup>
-                  <p>Соблюдение сроков</p>
                 </th>
-                <th>
+                <th class="percent-item">
                   50<sup>%</sup>
-                  <p>Минимальная предоплата</p>
                 </th>
+              </tr>
+              <tr>
+                <td class="table-item">
+                Уровень самоотдачи
+                </td>
+                <td class="table-item">
+                Соблюдение сроков
+                </td>
+                <td class="table-item">
+                Минимальная предоплата
+                </td>
               </tr>
             </table>
           </div>
@@ -151,29 +159,28 @@
       <section class="partners">
         <div class="inner">
           <h2 class="visually-hidden">Партнеры</h2>
-          <!--При наведении логотипы становятся черного цвета, в состоянии покоя есть прозрачность-->
-            <ul class="partners-list">
-             <li class="partners-item">
-                <a href="https://htmlacademy.ru/intensive/htmlcss">
-                  <img src="img/logo-1-1.png" width="199" height="68" alt="HTML Academy">
-                </a>
-              </li>
-              <li class="partners-item">
-                <a href="#">
-                  <img src="img/logo-2-2.png" width="209" height="90" alt="Барбершоп">
-                </a>
-              </li>
-              <li class="partners-item">
-                <a href="#">
-                  <img src="img/logo-3-3.png" width="185" height="52" alt="PINK">
-                </a>
-              </li>
-              <li class="partners-item">
-                <a href="#">
-                  <img src="img/logo-4-4.png" width="173" height="84" alt="MISHKA">
-                </a>
-              </li>
-            </ul>
+          <ul class="partners-list">
+            <li class="partners-item">
+              <a href="https://htmlacademy.ru/intensive/htmlcss">
+                <img src="img/logo-1-1.png" width="199" height="68" alt="HTML Academy">
+              </a>
+            </li>
+            <li class="partners-item">
+              <a href="#">
+                <img src="img/logo-2-2.png" width="209" height="90" alt="Барбершоп">
+              </a>
+            </li>
+            <li class="partners-item">
+              <a href="#">
+                <img src="img/logo-3-3.png" width="185" height="52" alt="PINK">
+              </a>
+            </li>
+            <li class="partners-item">
+              <a href="#">
+                <img src="img/logo-4-4.png" width="173" height="84" alt="MISHKA">
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -187,7 +194,7 @@
             <h3>Nërds design studio</h3>
             <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
             <p><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
-            <a class="feedback-link" href="#">Напишите нам</a>
+            <a class="button feedback-link" href="#">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -206,7 +213,7 @@
             <label for="message-field">Текст письма:</label>
             <textarea id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме"></textarea>
           </p>
-          <button type="submit" class="send-button">Отправить</button>
+          <button type="submit" class="button send-button">Отправить</button>
         </form>
         <button type="button" class="close-button" aria-label="Закрыть"></button>
       </section>

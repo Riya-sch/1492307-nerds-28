@@ -1,6 +1,6 @@
 /* Variables */
 
-/*.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -10,49 +10,46 @@
 
 :root {
   --black-text: #000000;
-  --text-color-section: #283136;
-  --text-color-dark-grey: #444444;
-  --text-color-grey: #666666;
-  --filter-text-color: #283136;
-  --background-color: #FFFFFF;
-  --icon-background-color: #E1E1E1;
-  --filter-background-color: #4D4D4D;
-  --background-grey: #EEEEEE;
+  --main-text-color: #283136;
+  --main-white: #FFFFFF;
   --button-color-red: #FB565A;
-  --button-color-green: #00CA74;
-  --button-color-yellow: #EFC849;
-  --popup-field-color: #D7DCDE;
-  --page-border-color: #DBDBDB;
-  --carts-border-color: #F2F2F2;
-  --cart-color: #A6A6A6;
-  --sorting-color: #231F20;
-  --ellipse-color: #C1C1C1;
-  --line-color-grey: #ABABAB;
-  --line-color-green: #00CA74;
-  --full-line-color: #D7DCDF;
   --focus-red: #e74246;
   --dark-red: #D7373B;
+  --button-color-green: #00CA74;
   --focus-green: #00BC6C;
+  --button-color-yellow: #EFC849;
   --focus-yellow: #EAB534;
+  --background-grey: #EEEEEE;
+  --icon-background-color: #E1E1E1;
   --lighter-grey: #DFDFDF;
+  --popup-field-color: #D7DCDE;
+  --page-border-color: #DBDBDB;
   --light-grey: #D5D5D5;
-  --dark: #231F20;
+  --full-line-color: #D7DCDF;
+  --line-color-grey: #ABABAB;
+  --text-color-grey: #666666;
+  --filter-background-color: #4D4D4D;
+  --text-color-dark-grey: #444444;
+  --dark-grey: #231F20;
 }
 
 
 /* Global */
 
 body {
-  min-width: 1160px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: var(--black-text);
-  background-color: var(--background-color);
-  background-position: top center;
+  color: var(--main-text-color);
+  background-color: var(--main-white);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -64,25 +61,63 @@ img {
   height: auto;
 }
 
-.inner {
-  width: 1440px;
-  margin: 0 auto;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
-/* Цвет на всю ширину */
-.main-navigation {
-  font-family: "Roboto", Arial, sans-serif;
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Button */
+
+.button {
   font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 0;
+  min-width: 160px;
+  color: var(--main-white);
+  background-color: var(--button-color-red);
+  vertical-align: middle;
+  border: none;
+  border-radius: 3px;
+  display: block;
+  outline: none;
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--focus-red);
+}
+.button:active {
+  background-color: var(--dark-red);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.inner {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header {
+  background-color: var(--background-grey);
+}
+
+.main-navigation {
   line-height: 30px;
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
   color: var(--black-text);
-  background-color: var(--background-grey);
   list-style: none;
 }
 
 .main-navigation h1 {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -94,23 +129,24 @@ img {
 /* User navigation */
 
 .site-navigation a,
-.cart a {
+.cart {
   color: var(--black-text);
 }
 
 .site-navigation a:hover,
-.cart a:hover {
+.cart:hover {
   color: var(--button-color-red);
 }
 
 .site-navigation a:focus,
-.cart a:focus {
-  color: var(--cart-color);
+.cart:focus {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation,
-.cart {
-list-style: none;
+.site-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -125,204 +161,128 @@ list-style: none;
 }
 
 .features h3 {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: var(--black-text);
   text-align: left;
-  padding: 0;
   margin: 0 0 27px;
-  }
+}
 
 .features p {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: var(--filter-text-color);
   margin: 0 0 38px;
 }
+/* Добавить кнопки переключения слайдеров*/
 
 
 /* Services */
 
 .services-list {
   list-style: none;
-  color: var(--background-color);
-  background-color: var(--background-color);
 }
 
-.service-item {
-  text-align: left;
-}
 .service-item p {
   width: 275px;
   margin-bottom: 33px;
+  display: block;
 }
 
 .service-item h3 {
-  color: var(--black-text);
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+  color: var(--black-text);
   padding: 0;
   margin: 19px 0 0;
 }
 
-.service-text {
-  color: var(--text-color-section)
-}
-
-.service-item a {
-  display: block;
-  width: 160px;
-  padding: 15px 0;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  color: var(--background-color);
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 3px;
-  border: 0;
-}
-
-.red {
-  background-color: var(--button-color-red);
+.button-red {
   width: 160px;
 }
-.red:hover {
-  background-color: var(--focus-red);
-  border-radius: 3px;
-}
-.red:active {
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-  color: rgba(255, 255, 255, 0.3);
-}
 
-.green {
+.button-green {
   background-color: var(--button-color-green);
   width: 160px;
 }
-.green:hover {
+.button-green:hover,
+.button-green:focus,
+.button-green:active {
   background-color: var(--focus-green);
-  border-radius: 3px;
-}
-.green:active {
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-  color: rgba(255, 255, 255, 0.3);
 }
 
-.yellow {
+.button-yellow {
   background-color: var(--button-color-yellow);
   width: 160px;
 }
-.yellow:hover {
+.button-yellow:hover,
+.button-yellow:focus,
+.button-yellow:active {
   background-color: var(--focus-yellow);
-  border-radius: 3px;
-}
-.yellow:active {
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 
 /* Studio statistics */
 
-.studio-statistics {
-  color: var(--background-color);
-  background-color: var(--background-color);
-}
-
 .about-studio h2 {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
   color: var(--black-text);
 }
 
-.about-studio p {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--text-color-section);
-}
-
 .studio-statistics h3 {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-color-section);
+  color: var(--black-text);
 }
 
 .studio-list {
   list-style: none;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--text-color-section);
+  margin: 0;
+  padding: 0;
 }
 
-.percent-list {
-  list-style: none;
-  font-family: "Roboto", Arial, sans-serif;
+.table-item {
+  line-height: 18px;
+}
+
+.percent-item {
   font-size: 45px;
   line-height: 64px;
   font-weight: 700;
   color: var(--black-text);
 }
 
-.percent-list p {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  color: var(--text-color-section);
-}
-
 
 /* Partners */
-/* Задать прозрачность логотипам */
-.partners-item {
+
+.partners-list{
   list-style: none;
-  color: var(--black-text);
-  background-color: rgba(255, 255, 255, 0.2); 
 }
 
-.partners-item a:hover {
-  color: var(--black-text);
-  background-color: rgb(255, 255, 255);
+.partners-item {
+  opacity: 0.2;
+}
+.partners-item:hover {
+  opacity: 1.0;
 } 
-
-.partners-item a:active {
-  color: var(--black-text);
-  background-color: rgba(255, 255, 255, 0.1);
+.partners-item:active,
+.partners-item:focus {
+  opacity: 0.1;
 }
+
 
 /* Contacts */
 
 .contact-info {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
   font-style: normal;
   align-items: center;
   color: var(--text-color-grey);
-  background-color: var(--background-color);
+  background-color: var(--main-white);
 }
 
 .contact-info h3 {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -331,46 +291,19 @@ list-style: none;
 }
 
 .contact-info address {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
   font-style: normal;
   color: var(--text-color-grey);
 }
 
 .tel {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
   font-style: normal;
   color: var(--text-color-grey);
 }
 
 .feedback-link {
-  display: block;
   width: 219px;
-  padding: 15px 0;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  color: var(--background-color);
-  background-color: var(--button-color-red);
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 3px;
-  border: 0;
-}
-
-.feedback-link:hover {
-  background-color: var(--focus-red);
-}
-.feedback-link:active {
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -382,12 +315,11 @@ list-style: none;
   left: 419px;
   top: 1691px;
   color: var(--basic-black);
-  background-color: var(--background-color);
+  background-color: var(--main-white);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .feedback h2 {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 45px;
   line-height: 53px;
   font-weight: 700;
@@ -396,128 +328,374 @@ list-style: none;
 }
 
 .feedback-item label {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: var(--black-text);
 }
 
 .feedback-item input {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
   color: var(--text-color-dark-grey);
-  background-color: var(--background-color);
+  background-color: var(--main-white);
   border: 2px solid var(--popup-field-color);
-  box-sizing: border-box;
   border-radius: 3px;
-  mix-blend-mode: normal;
   width: 360px;
   height: 50px;
 }
 
 .feedback-item textarea {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
   color: var(--text-color-dark-grey);
-  background-color: var(--background-color);
+  background-color: var(--main-white);
   border: 2px solid var(--popup-field-color);
   box-sizing: border-box;
   border-radius: 3px;
-  mix-blend-mode: normal;
   width: 760px;
   height: 118px;
 }
 
 .feedback-item input:focus {
   color: var(--text-color-dark-grey);
-  background: var(--background-color);
+  background: var(--main-white);
   border: 2px solid var(--black-text);
-  box-sizing: border-box;
   border-radius: 3px;
 }
 
 .feedback-item textarea:focus {
   color: var(--text-color-dark-grey);
-  background: var(--background-color);
+  background-color: var(--main-white);
   border: 2px solid var(--black-text);
-  box-sizing: border-box;
-  border-radius: 3px;
-}
-/* Пока не удалось невалидное значение сделать, займусь позже */
-input:invalid:not(:placeholder-shown) {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  background: var(--background-color);
-  border: 2px solid var(--focus-red);
-  box-sizing: border-box;
   border-radius: 3px;
 }
 
-.send-button {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
+.feedback-form input:invalid {
   line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  padding: 16px 0;
-  width: 259px;
-  color: var(--background-color);
-  background-color: var(--button-color-red);
-  vertical-align: middle;
-  border: none;
+  background: var(--main-white);
+  border: 2px solid var(--focus-red);
   border-radius: 3px;
 }
-.send-button:hover,
-.send-button:focus {
-  background-color: var(--focus-red);
-  border-radius: 3px;
-  outline: none;
-}
-.send-button:active {
-  background-color: var(--dark-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-}
+
+/* тоже общий стиль с остальными кнопками */
 .send-button {
+  width: 259px;
+}
+
+
+/* Main page Catalog */
+
+.main-header-logo:active,
+.main-header-logo:focus {
+  opacity: 0.4;
+}
+
+
+/* Filters */
+
+.filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Range */
+
+/* Добавить кружки */
+
+.range-block {
+  width: 260px;
+  padding: 39px 22px 33px 33px ;
+  text-align: center;
+  background-color: var(--background-grey);
+  border: 2px solid var(--background-grey);
+  border-radius: 3px;
+}
+
+.range-left,
+.range-right {
+  width: 20px; 
+  height: 20px;
+  background-color: var(--main-white);
+  border-color: var(--main-white);
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.range-line {
+  background-color: var(--full-line-color);
+  width: 205px;
+  height: 2px;
+}
+.range-green-line {
+  background-color: var(--button-color-green);
+  width: 138px;
+  height: 2px;
+}
+
+.range-cost {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.range-field input {
+  width: 80px;
+  padding: 8px 5px;
+  text-align: center;
+  background-color: var(--background-grey);
+  border: 2px solid var(--background-grey);
+  border-radius: 3px;
+}
+
+.filter-input {
+  opacity: 0.4;
+}
+
+.filter-input:disabled + label {
+  opacity: 0.3;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+  color: var(--filter-background-color);
+  opacity: 1.0;
+}
+
+/* Filter Button */
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--black-text);
+  background-color: var(--lighter-grey);
+}
+.filter-button {
+  width: 260px;
+  color: var(--black-text);
+  background-color: var(--background-grey);
+}
+.filter-button:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: var(--light-grey);
+}
+
+
+/* Sorting */
+
+.sorting {
+  color: var(--main-white);
+  background-color: var(--main-white);
+}
+
+.sorting h3 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--black-text);
+  text-transform: uppercase;
+}
+
+.sorting-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--black-text);
+  background-color: var(--main-white);
+}
+ 
+.sorting-list a {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.sorting-list a:hover {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.sorting-list a:focus,
+.sorting-list a:active {
+  color: rgb(0, 0, 0);
+}
+
+.sorting-button-down a,
+.sorting-button-up a {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.sorting-button-down a {
+  border-width: 10px 5.5px 0;
+  border-color: rgba(166, 166, 166, 0.2) transparent transparent;
+}
+
+.sorting-button-up a {
+  border-width: 0 5.5px 10px;
+  border-color: transparent transparent rgba(166, 166, 166, 0.2);
+}
+
+.sorting-button-down a:hover{
+  border-color: rgba(0, 0, 0, 0.6) transparent transparent;
+}
+.sorting-button-up a:hover {
+  border-color: transparent transparent rgba(0, 0, 0, 0.6);
+}
+
+.sorting-button-down a:focus{
+  border-color: var(--dark-grey) transparent transparent;
+}
+.sorting-button-up a:focus {
+  border-color: transparent transparent var(--dark-grey);
+}
+
+
+/* Catalog */
+
+.site-navigation .active-page {
+  border-bottom: 2px solid var(--button-color-red);
+  padding-bottom: 8px;
+}
+
+.catalog-list {
+  list-style: none;
+  color: var(--black-text);
+  background-color: var(--main-white);
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item {
+  width: 360px;
+  background-color: var(--background-grey);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Нужно чтобы при наведении браузер стал темным */
+.catalog-item:hover {
+  background-color: var(--main-white);
+  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.close-button {
-  background: rgba(251, 86, 90, 0.3);
+.browser {
+  width: 360px;
+  height: 40px;
+  color: rgba(77, 77, 77, 0.12)
+}
+
+.browser:hover {
+  background-color: var(--filter-background-color);
+  border-radius: 3px 3px 0px 0px;
+}
+
+.catalog-slider {
+  width: 360px;
+  height: 231px;
+  left: 540px;
+  top: 877px;
+}
+
+.catalog-slider h3 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.catalog-slider p {
+  line-height: 18px;
+  text-transform: none;
+  text-align: center;
+  color: var(--text-color-grey)
+}
+
+.catalog-slider h3 a {
+  color: var(--black-text);
+}
+.catalog-slider h3 a:hover,
+.catalog-slider h3 a:active {
+  color: var(--button-color-red);
+}
+.catalog-slider h3 a:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.price-button {
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+/* Pagination */
+
+.pagination-list {
+  list-style: none;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin: 55px 11px;
+}
+
+.pagination-item a {
+  display: inline-block;
+  background-color: var(--background-grey);
+  color: var(--black-text);
+  border: 3px solid var(--background-grey);
+  padding: 17px 20px;
+}
+.pagination-item a:hover {
+  background: var(--lighter-grey);
+  border: 3px solid var(--lighter-grey);
+}
+.pagination-item a:focus,
+.pagination-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.pagination-active a,
+.pagination-active a:hover,
+.pagination-active a:active,
+.pagination-active a:focus {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.0001);
+  color: var(--black-text);
+  border: 3px solid var(--page-border-color);
+  padding: 17px 20px;
 }
 
 
 /* Main footer */
 
 .main-footer {
-  color: var(--background-color);
-  background-color: var(--background-color);
+  background-color: var(--main-white);
 }
-
 
 /* Socials */
 
 .social-button {
   text-align: center;
+  color: var(--main-white);
 }
 
 .footer-social ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .social-button {
-  color: var(--background-color);
+  color: var(--main-white);
   background-color: var(--icon-background-color);
 }
 
@@ -536,7 +714,6 @@ input:invalid:not(:placeholder-shown) {
 }
 
 .friends h3 {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -544,357 +721,6 @@ input:invalid:not(:placeholder-shown) {
 }
 
 .friends p {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
   line-height: 22px;
   color: var(--text-color-dark-grey);
 }
-
-
-/* Button */
-
-.button {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  padding: 16px 0;
-  width: 240px;
-  color: var(--background-color);
-  background-color: var(--button-color-red);
-  vertical-align: middle;
-  border: none;
-  border-radius: 3px;
-}
-
-.button:hover,
-.button:focus {
-  background-color: var(--focus-red);
-  outline: none;
-  border-radius: 3px;
-}
-
-.button:active {
-  background-color: var(--dark-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.button:hover,
-.button:focus,
-.button:active {
-  cursor: pointer;
-}
-
-
-/* Main page Catalog */
-
-.main-header-logo {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  text-transform: none;
-  color: var(--black-text);
-}
-
-.main-header-logo a:hover,
-.main-header-logo a:focus {
-  opacity: 1;
-}
-/* Задать прозрачность при нажатии */
-.main-header-logo a:active {
-  opacity: 0.3;
-}
-
-/* Filters */
-
-.filter legend {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.filter ul {
-  list-style: none;
-  color: var(--black-text);
-}
-
-.filter label {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: var(--filter-text-color);
-}
-
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {
-  color: var(--filter-text-color);
-}
-
-.filter-input-checkbox:disabled + label {
-  color: var(--filter-text-color);
-  opacity: 0.3;
-}
-
-.filter-input-radio:hover + label,
-.filter-input-radio:focus + label {
-  color: var(--filter-text-color);
-}
-
-.filter-input-radio:disabled + label {
-  color: var(--filter-text-color);
-  opacity: 0.3;
-}
-
-.filter-button {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  padding: 16px 0;
-  width: 260px;
-  color: var(--black-text);
-  background-color: var(--background-grey);
-  vertical-align: middle;
-  border: none;
-  border-radius: 3px;
-}
-.filter-button:hover,
-.filter-button:focus {
-  background-color: var(--lighter-grey);
-  border-radius: 3px;
-  outline: none;
-}
-.filter-button:active {
-  background-color: var(--light-grey);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-}
-.filter-button {
-  cursor: pointer;
-}
-
-
-/* Sorting */
-
-.sorting {
-  color: var(--background-color);
-  background-color: var(--background-color);
-}
-
-.sorting h3 {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  color: var(--black-text);
-  text-transform: uppercase;
-}
-
-.sorting-list {
-  list-style: none;
-  color: var(--black-text);
-  background-color: var(--background-color);
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 28px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
- 
-.sorting-list a {
-  color: rgba(0, 0, 0, 0.3)
-}
-
-.sorting-list a:hover {
-  color: rgba(0, 0, 0, 0.6)
-}
-
-.sorting-list a:focus,
-.sorting-list a:active {
-  color: rgb(0, 0, 0);
-}
-/* Пока такие треугольники получились */
-.sorting-button-down a {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 5.5px 0;
-  border-color: rgba(166, 166, 166, 0.2) transparent transparent;
-}
-
-.sorting-button-up a {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 5.5px 10px;
-  border-color: transparent transparent rgba(166, 166, 166, 0.2);
-}
-
-.sorting-button-down a:hover{
-  border-color: var(--cart-color) transparent transparent;
-}
-.sorting-button-up a:hover {
-  border-color: transparent transparent var(--cart-color);
-}
-
-.sorting-button-down a:focus{
-  border-color: var(--dark) transparent transparent;
-}
-.sorting-button-up a:focus {
-  border-color: transparent transparent var(--dark);
-}
-
-
-/* Catalog */
-
-.site-navigation .active {
-  border-bottom: 2px solid var(--button-color-red);
-  padding-bottom: 8px;
-}
-
-.catalog-list {
-  list-style: none;
-  color: var(--black-text);
-  background-color: var(--background-color);
-}
-
-.catalog-item {
-  width: 360px;
-  background-color: var(--carts-border-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-/* Нужно чтобы при наведении браузер стал темным */
-.catalog-item:hover {
-  background-color: var(--background-color);
-  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.browser {
-  width: 360px;
-  height: 40px;
-  color: rgba(77, 77, 77, 0.12)
-}
-
-.browser:hover {
-  background-color: var(--filter-background-color);
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.catalog-slider {
-  width: 360px;
-  height: 231px;
-  left: 540px;
-  top: 877px;
-  text-align: center;
-}
-
-.catalog-slider h3 {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.catalog-slider p {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  text-transform: none;
-  text-align: center;
-  color: var(--text-color-grey)
-}
-
-.catalog-slider h3 a {
-  color: var(--black-text);
-}
-.catalog-slider h3 a:hover,
-.catalog-slider h3 a:active {
-  color: var(--button-color-red);
-}
-.catalog-slider h3 a:focus {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.price {
-  width: 200px;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  color: var(--background-color);
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  padding: 13px 61px;
-  border-radius: 3px;
-  background-color: var(--button-color-red); 
-}
-
-.price a {
-  color: var(--background-color);
-  background-color: var(--button-color-red); 
-}
-.price:hover {
-  color: var(--background-color);
-  background-color: var(--focus-red); 
-}
-.price:focus {
-  color: var(--background-color);
-  background-color: var(--dark-red); 
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  border-radius: 3px;
-}
-
-
-/* Pagination */
-
-.pagination-list {
-  list-style: none;
-}
-
-.pagination-item a {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  color: var(--black-text);
-  background-color: var(--background-grey);
-  border: 3px var(--page-border-color);
-  box-sizing: border-box;
-  border-radius: 3px;
-}
-
-.pagination-item a:hover {
-  background: var(--lighter-grey);
-  border-radius: 3px;
-}
-.pagination-item a:focus {
-  mix-blend-mode: normal;
-  color: rgba(0, 0, 0, 0.3);
-}
-.pagination-item a:active {
-  background: rgba(0, 0, 0, 0.0001);
-  border: 3px solid var(--page-border-color);
-  box-sizing: border-box;
-  border-radius: 3px;
-}
-/* Добавить стиль ссылки на текущую страницу */

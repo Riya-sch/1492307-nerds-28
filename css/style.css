@@ -368,8 +368,7 @@ input[type='number'] {
   border-radius: 3px;
 }
 
-.feedback-form input:invalid {
-  line-height: 18px;
+.feedback-form input:required {
   background: var(--main-white);
   border: 2px solid var(--focus-red);
   border-radius: 3px;

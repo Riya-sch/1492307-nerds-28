@@ -1,6 +1,6 @@
 /* Variables */
 
-/* .visually-hidden {
+/*.visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -79,9 +79,9 @@ input[type='number'] {
   text-decoration: none;
   padding: 15px 0;
   min-width: 160px;
+  width: 240px;
   color: var(--main-white);
   background-color: var(--button-color-red);
-  vertical-align: middle;
   border: none;
   border-radius: 3px;
   display: block;
@@ -179,9 +179,11 @@ input[type='number'] {
 
 .services-list {
   list-style: none;
-}
+  margin: 0;
+  padding: 80px 0;
+  }
 
-.service-item p {
+.service-text {
   width: 275px;
   margin-bottom: 33px;
   display: block;
@@ -242,7 +244,12 @@ input[type='number'] {
   padding: 0;
 }
 
-.table-item {
+.percent-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.percent-description {
   line-height: 18px;
 }
 
@@ -272,115 +279,7 @@ input[type='number'] {
 }
 
 
-/* Contacts */
-
-.contact-info {
-  line-height: 18px;
-  font-style: normal;
-  align-items: center;
-  color: var(--text-color-grey);
-  background-color: var(--main-white);
-}
-
-.contact-info h3 {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--black-text)
-}
-
-.contact-info address {
-  line-height: 18px;
-  font-style: normal;
-  color: var(--text-color-grey);
-}
-
-.tel {
-  line-height: 18px;
-  font-style: normal;
-  color: var(--text-color-grey);
-}
-
-.feedback-link {
-  width: 219px;
-}
-
-
-/* Feedback form*/
-
-.feedback {
-  width: 960px;
-  height: 590px;
-  left: 419px;
-  top: 1691px;
-  color: var(--basic-black);
-  background-color: var(--main-white);
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.feedback h2 {
-  font-size: 45px;
-  line-height: 53px;
-  font-weight: 700;
-  font-style: normal;
-  color: var(--black-text);
-}
-
-.feedback-item label {
-  line-height: 18px;
-  font-weight: 700;
-  color: var(--black-text);
-}
-
-.feedback-item input {
-  line-height: 18px;
-  color: var(--text-color-dark-grey);
-  background-color: var(--main-white);
-  border: 2px solid var(--popup-field-color);
-  border-radius: 3px;
-  width: 360px;
-  height: 50px;
-}
-
-.feedback-item textarea {
-  line-height: 18px;
-  color: var(--text-color-dark-grey);
-  background-color: var(--main-white);
-  border: 2px solid var(--popup-field-color);
-  box-sizing: border-box;
-  border-radius: 3px;
-  width: 760px;
-  height: 118px;
-}
-
-.feedback-item input:focus {
-  color: var(--text-color-dark-grey);
-  background: var(--main-white);
-  border: 2px solid var(--black-text);
-  border-radius: 3px;
-}
-
-.feedback-item textarea:focus {
-  color: var(--text-color-dark-grey);
-  background-color: var(--main-white);
-  border: 2px solid var(--black-text);
-  border-radius: 3px;
-}
-
-.feedback-form input:required {
-  background: var(--main-white);
-  border: 2px solid var(--focus-red);
-  border-radius: 3px;
-}
-
-/* тоже общий стиль с остальными кнопками */
-.send-button {
-  width: 259px;
-}
-
-
-/* Main page Catalog */
+/* MAIN PAGE CATALOG */
 
 .main-header-logo:active,
 .main-header-logo:focus {
@@ -388,7 +287,7 @@ input[type='number'] {
 }
 
 
-/* Filters */
+/* FILTERS */
 
 .filter legend {
   font-size: 18px;
@@ -404,13 +303,11 @@ input[type='number'] {
   padding: 0;
 }
 
-
-
 /* Range */
 
 /* Добавить кружки */
 
-.range-block {
+.range {
   width: 260px;
   padding: 39px 22px 33px 33px ;
   text-align: center;
@@ -419,8 +316,7 @@ input[type='number'] {
   border-radius: 3px;
 }
 
-.range-left,
-.range-right {
+.range-button {
   width: 20px; 
   height: 20px;
   background-color: var(--main-white);
@@ -440,11 +336,12 @@ input[type='number'] {
   height: 2px;
 }
 
-.range-cost {
+.range-field-label {
   line-height: 22px;
   text-transform: uppercase;
 }
-.range-field input {
+
+.range-field-input {
   width: 80px;
   padding: 8px 5px;
   text-align: center;
@@ -452,6 +349,8 @@ input[type='number'] {
   border: 2px solid var(--background-grey);
   border-radius: 3px;
 }
+
+/* Filter */
 
 .filter-input {
   opacity: 0.4;
@@ -469,15 +368,15 @@ input[type='number'] {
 
 /* Filter Button */
 
-.filter-button:hover,
-.filter-button:focus {
-  color: var(--black-text);
-  background-color: var(--lighter-grey);
-}
 .filter-button {
   width: 260px;
   color: var(--black-text);
   background-color: var(--background-grey);
+}
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--black-text);
+  background-color: var(--lighter-grey);
 }
 .filter-button:active {
   color: rgba(0, 0, 0, 0.3);
@@ -488,7 +387,6 @@ input[type='number'] {
 /* Sorting */
 
 .sorting {
-  color: var(--main-white);
   background-color: var(--main-white);
 }
 
@@ -512,46 +410,41 @@ input[type='number'] {
 .sorting-list a {
   color: rgba(0, 0, 0, 0.3)
 }
-
 .sorting-list a:hover {
   color: rgba(0, 0, 0, 0.6)
 }
-
 .sorting-list a:focus,
 .sorting-list a:active {
   color: rgb(0, 0, 0);
 }
 
-.sorting-button-down a,
-.sorting-button-up a {
+.button-up,
+.button-down {
   display: block;
   width: 0;
   height: 0;
-  border-style: solid;
+  border: 6px solid transparent;
 }
 
-.sorting-button-down a {
-  border-width: 10px 5.5px 0;
-  border-color: rgba(166, 166, 166, 0.2) transparent transparent;
+.button-down {
+  border-top: 11px solid rgba(166, 166, 166, 0.2);
+}
+.button-up {
+	border-bottom: 11px solid rgba(166, 166, 166, 0.2);
 }
 
-.sorting-button-up a {
-  border-width: 0 5.5px 10px;
-  border-color: transparent transparent rgba(166, 166, 166, 0.2);
+.button-down:hover {
+  border-top: 11px solid rgba(0, 0, 0, 0.6);
+}
+.button-up:hover {
+  border-bottom: 11px solid rgba(0, 0, 0, 0.6);
 }
 
-.sorting-button-down a:hover{
-  border-color: rgba(0, 0, 0, 0.6) transparent transparent;
+.button-down:focus{
+  border-top: 11px solid;
 }
-.sorting-button-up a:hover {
-  border-color: transparent transparent rgba(0, 0, 0, 0.6);
-}
-
-.sorting-button-down a:focus{
-  border-color: var(--dark-grey) transparent transparent;
-}
-.sorting-button-up a:focus {
-  border-color: transparent transparent var(--dark-grey);
+.button-up:focus {
+  border-bottom: 11px solid;
 }
 
 
@@ -577,33 +470,31 @@ input[type='number'] {
   border-radius: 5px;
 }
 
-/* Нужно чтобы при наведении браузер стал темным */
 .catalog-item:hover {
   background-color: var(--main-white);
   box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
   border-radius: 5px;
-  cursor: pointer;
 }
 
-.browser {
+.catalog-card-nav {
   width: 360px;
   height: 40px;
   color: rgba(77, 77, 77, 0.12)
 }
 
-.browser:hover {
+.catalog-card-nav:hover {
   background-color: var(--filter-background-color);
   border-radius: 3px 3px 0px 0px;
 }
 
-.catalog-slider {
+.catalog-card-content {
   width: 360px;
   height: 231px;
   left: 540px;
   top: 877px;
 }
 
-.catalog-slider h3 {
+.catalog-card-content h3 {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -611,21 +502,21 @@ input[type='number'] {
   text-align: center;
 }
 
-.catalog-slider p {
+.catalog-card-content p {
   line-height: 18px;
   text-transform: none;
   text-align: center;
   color: var(--text-color-grey)
 }
 
-.catalog-slider h3 a {
+.catalog-card-content h3 a {
   color: var(--black-text);
 }
-.catalog-slider h3 a:hover,
-.catalog-slider h3 a:active {
+.catalog-card-content h3 a:hover,
+.catalog-card-content h3 a:active {
   color: var(--button-color-red);
 }
-.catalog-slider h3 a:focus {
+.catalog-card-content h3 a:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -674,6 +565,96 @@ input[type='number'] {
 }
 
 
+/* Contacts */
+
+.contact-info {
+  line-height: 18px;
+  font-style: normal;
+  align-items: center;
+  color: var(--text-color-grey);
+  background-color: var(--main-white);
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--black-text)
+}
+
+.contact-info address {
+  line-height: 18px;
+  font-style: normal;
+  color: var(--text-color-grey);
+}
+
+.tel {
+  line-height: 18px;
+  font-style: normal;
+  color: var(--text-color-grey);
+}
+
+.feedback-link {
+  width: 219px;
+}
+
+
+/* Feedback form*/
+
+.feedback {
+  width: 960px;
+  height: 590px;
+  padding: 65px 100px;
+  color: var(--basic-black);
+  background-color: var(--main-white);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feedback h2 {
+  font-size: 45px;
+  line-height: 53px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--black-text);
+}
+
+.field-label {
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--black-text);
+}
+
+.field-input {
+  width: 360px;
+  height: 50px;
+  padding: 0 14px;
+  line-height: 18px;
+  color: var(--text-color-dark-grey);
+  background-color: var(--main-white);
+  border: 2px solid var(--popup-field-color);
+  border-radius: 3px;
+}
+
+textarea.field-input {
+  width: 760px;
+  height: 118px;
+  padding: 16px 14px;
+}
+
+.field-input:focus {
+  color: var(--text-color-dark-grey);
+  background: var(--main-white);
+  border: 2px solid var(--black-text);
+  border-radius: 3px;
+}
+
+.feedback-button {
+  width: 259px;
+}
+
+/* Добавить кнопку закрытия */
+
 /* Main footer */
 
 .main-footer {
@@ -682,26 +663,21 @@ input[type='number'] {
 
 /* Socials */
 
-.social-button {
-  text-align: center;
-  color: var(--main-white);
-}
-
-.footer-social ul {
+.social-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.social-button {
-  color: var(--main-white);
+.social-link {
   background-color: var(--icon-background-color);
+  color: var(--main-white);
 }
-
-.social-button:hover,
-.social-button:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--button-color-red);
 }
+
 /* svg еще вставлять не научились, пока прописала стили из Фигмы */
 .social-button:active {
   width: 81px;
@@ -712,14 +688,14 @@ input[type='number'] {
   border-radius: 3px;
 }
 
-.friends h3 {
+.main-footer-text h3 {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   color: var(--black-text);
 }
 
-.friends p {
+.main-footer-text p {
   line-height: 22px;
   color: var(--text-color-dark-grey);
 }

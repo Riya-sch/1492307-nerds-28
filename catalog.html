@@ -10,21 +10,21 @@
     
   <body>
 
-    <header class="header">
+    <header class="main-header">
       <div class="inner">
         <nav class="main-navigation">
           <a class="main-header-logo" href="index.html">
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Nerds»">
           </a>
           <ul class="site-navigation">
-            <li><a href="blank.html">Студия</a></li>
-            <li><a href="blank.html">Клиенты</a></li>
-            <li><a class="active-page" href="catalog.html">Магазин</a></li>
-            <li><a href="blank.html">Контакты</a></li>
+            <li><a class="site-navigation-link" href="blank.html">Студия</a></li>
+            <li><a class="site-navigation-link" href="blank.html">Клиенты</a></li>
+            <li><a class="active-page site-navigation-link" href="catalog.html">Магазин</a></li>
+            <li><a class="site-navigation-link" href="blank.html">Контакты</a></li>
           </ul>
-          <a class="cart" href="blank.html">Корзина</a>
+          <a class="site-navigation-link cart" href="blank.html">Корзина</a>
         </nav>
-        <h1>Магазин готовых шаблонов</h1>
+        <h1 class="main-navigation-title">Магазин готовых шаблонов</h1>
       </div>
     </header>
 
@@ -38,8 +38,8 @@
             <div class="range">
               <button class="range-button range-button-min" type="button" aria-label="Левый ползунок"></button>
               <button class="range-button range-button-max" type="button" aria-label="Правый ползунок"></button>
-              <div class="range-line">
-                <div class="range-green-line"></div>
+              <div class="range-progress">
+                <div class="range-progress-bar"></div>
               </div>
             </div>
             <div class="range-cost">
@@ -56,17 +56,17 @@
         
           <fieldset>
             <legend>Сетка:</legend>
-            <ul>
+            <ul class="filter-radio-list">
               <li class="filter-radio">
-                <input class="filter-input" type="radio" name="option" value="adaptive" id="filter-adaptive" checked disabled>
+                <input class="radio-button-input" type="radio" name="option" value="adaptive" id="filter-adaptive" checked disabled>
                 <label class="radio-button-label" for="filter-adaptive">Адаптивная</label>
               </li>
               <li class="filter-radio">
-                <input class="filter-input" type="radio" name="option" value="fixed" id="filter-fixed">
+                <input class="radio-button-input" type="radio" name="option" value="fixed" id="filter-fixed">
                 <label class="radio-button-label" for="filter-fixed">Фиксированная</label>               
               </li>
               <li class="filter-radio">
-                <input class="filter-input" type="radio" name="option" value="rubber" id="filter-rubber">
+                <input class="radio-button-input" type="radio" name="option" value="rubber" id="filter-rubber">
                 <label class="radio-button-label" for="filter-rubber">Резиновая</label>
               </li>
             </ul>
@@ -74,30 +74,30 @@
 
           <fieldset>
             <legend>Особенности:</legend>
-            <ul>
+            <ul class="filter-checkbox-list">
               <li class="filter-checkbox">
-                <input class="filter-input" type="checkbox" name="slider" id="filter-slider" checked disabled>
+                <input class="checkbox-input" type="checkbox" name="slider" id="filter-slider" checked disabled>
                 <label class="checkbox-label" for="filter-slider">Слайдер</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input" type="checkbox" name="advantages" id="filter-advantages">
+                <input class="checkbox-input" type="checkbox" name="advantages" id="filter-advantages">
                 <label class="checkbox-label" for="filter-advantages">Блок преимуществ</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input" type="checkbox" name="news" id="filter-news" checked>
+                <input class="checkbox-input" type="checkbox" name="news" id="filter-news" checked>
                 <label class="checkbox-label" for="filter-news">Новости</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input" type="checkbox" name="gallery" id="filter-gallery">
+                <input class="checkbox-input" type="checkbox" name="gallery" id="filter-gallery">
                 <label class="checkbox-label" for="filter-gallery">Галерея</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input" type="checkbox" name="basket" id="filter-basket">
+                <input class="checkbox-input" type="checkbox" name="basket" id="filter-basket">
                 <label class="checkbox-label" for="filter-basket">Корзина</label>
               </li>
              </ul>
           </fieldset>
-          <button class="button filter-button" type="submit">Показать</button>
+          <button class="button filter-button button-wide" type="submit">Показать</button>
         </form>
         </div>        
       </section>
@@ -134,14 +134,16 @@
             <li class="catalog-item">
               <article class="catalog-card">
                 <div class="catalog-card-nav">
-                  <span></span><span></span><span></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
                 </div>
                 <a href="#">
-                  <img src="img/img-sedona.jpg" width="360" height="576" alt="Шаблон Седона">
+                  <img class="catalog-card-img" src="img/img-sedona.jpg" width="360" height="576" alt="Шаблон Седона">
                 </a>
                 <div class="catalog-card-content">
-                  <h3><a href="#">Sedona</a></h3>
-                  <p>Информационный сайт для туристов</p>
+                  <h3 class="catalog-card-title"><a href="#">Sedona</a></h3>
+                  <p class="catalog-card-desc">Информационный сайт для туристов</p>
                   <a class="button price-button" href="#">9 900 ₽</a>
                 </div>
               </article>          
@@ -149,14 +151,16 @@
             <li class="catalog-item">
               <article class="catalog-card">
                 <div class="catalog-card-nav">
-                  <span></span><span></span><span></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
                 </div>
                  <a href="#">
-                   <img src="img/img-pink.jpg" width="358" height="578" alt="Шаблон Пинк">
+                   <img class="catalog-card-img" src="img/img-pink.jpg" width="358" height="578" alt="Шаблон Пинк">
                 </a>
                 <div class="catalog-card-content">
-                  <h3><a href="#">Pink app</a></h3>
-                  <p>Продуктовый лендинг приложения для iOS и Android</p>
+                  <h3 class="catalog-card-title"><a href="#">Pink app</a></h3>
+                  <p class="catalog-card-desc">Продуктовый лендинг приложения для iOS и Android</p>
                   <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
@@ -164,14 +168,16 @@
             <li class="catalog-item">
               <article class="catalog-card">
                 <div class="catalog-card-nav">
-                  <span></span><span></span><span></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
                 </div>
                 <a href="#">
-                  <img src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон Барбершоп">
+                  <img class="catalog-card-img" src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон Барбершоп">
                 </a>
                 <div class="catalog-card-content">
-                  <h3><a href="#">Barbershop</a></h3>
-                  <p>Сайт салона красоты. Для мужчин, да.</p>
+                  <h3 class="catalog-card-title"><a href="#">Barbershop</a></h3>
+                  <p class="catalog-card-desc">Сайт салона красоты. Для мужчин, да.</p>
                   <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
@@ -179,14 +185,16 @@
             <li class="catalog-item">
               <article class="catalog-card">
                 <div class="catalog-card-nav">
-                  <span></span><span></span><span></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
                 </div>
                 <a href="#">
-                 <img src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон Мишка">
+                 <img class="catalog-card-img" src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон Мишка">
                 </a>
                 <div class="catalog-card-content">
-                  <h3><a href="#">Mishka</a></h3>
-                  <p>Интернетмагазин вязаных игрушек</p>
+                  <h3 class="catalog-card-title"><a href="#">Mishka</a></h3>
+                  <p class="catalog-card-desc">Интернетмагазин вязаных игрушек</p>
                   <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
@@ -194,14 +202,16 @@
             <li class="catalog-item">
               <article class="catalog-card">
                 <div class="catalog-card-nav">
-                  <span></span><span></span><span></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
                 </div>
                 <a href="#">
-                  <img src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон Аплюс">
+                  <img class="catalog-card-img" src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон Аплюс">
                 </a>
                 <div class="catalog-card-content">
-                  <h3><a href="#">A plus</a></h3>
-                  <p>Лендинг курсов повышения квалификации</p>
+                  <h3 class="catalog-card-title"><a href="#">A plus</a></h3>
+                  <p class="catalog-card-desc">Лендинг курсов повышения квалификации</p>
                   <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
@@ -209,14 +219,16 @@
             <li class="catalog-item">
               <article class="catalog-card">
                 <div class="catalog-card-nav">
-                  <span></span><span></span><span></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
+                  <span class="card-nav-switches"></span>
                 </div>
                 <a href="#">
-                  <img src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон Кваст">
+                  <img class="catalog-card-img" src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон Кваст">
                 </a>
                 <div class="catalog-card-content">
-                  <h3><a href="#">Кваст</a></h3>
-                  <p>Промо-сайт производителя крафтового кваса</p>
+                  <h3 class="catalog-card-title"><a href="#">Кваст</a></h3>
+                  <p class="catalog-card-desc">Промо-сайт производителя крафтового кваса</p>
                   <a class="button price-button" href="#">9 900 руб.</a>
                 </div>
               </article>
@@ -254,7 +266,7 @@
             <h3>N&Euml;rds design studio</h3>
             <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
             <p><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
-            <a class="button feedback-link" href="#">Напишите нам</a>
+            <a class="button contact-info-button button-wide" href="#">Напишите нам</a>
           </div>
         </div>
       </section>

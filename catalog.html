@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Дизайн-студия «Nerds»</title>
+    <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-    
-  <body>
+  <body class="page-body">
 
     <header class="main-header">
       <div class="inner">
@@ -17,18 +16,19 @@
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Nerds»">
           </a>
           <ul class="site-navigation">
-            <li><a class="site-navigation-link" href="blank.html">Студия</a></li>
-            <li><a class="site-navigation-link" href="blank.html">Клиенты</a></li>
-            <li><a class="active-page site-navigation-link" href="catalog.html">Магазин</a></li>
-            <li><a class="site-navigation-link" href="blank.html">Контакты</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Студия</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Клиенты</a></li>
+            <li class="site-navigation-item active page"><a class="site-navigation-link" href="catalog.html">Магазин</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Контакты</a></li>
           </ul>
-          <a class="site-navigation-link cart" href="blank.html">Корзина</a>
+          <a class="cart" href="blank.html">Корзина</a>
         </nav>
         <h1 class="main-navigation-title">Магазин готовых шаблонов</h1>
       </div>
     </header>
 
     <main>
+      <div class="catalog-wrapper">
       <section class="filter">
         <div class="inner">
         <h2 class="visually-hidden">Фильтр товаров</h2>    
@@ -106,7 +106,7 @@
       <section class="sorting">
         <div class="inner">
            <h2 class="visually-hidden">Сортировка</h2>
-            <h3>Сортировать:</h3>
+            <h3 class="sorting-list-title">Сортировать:</h3>
             <ul class="sorting-list">
               <li class="sorting-item">
                 <a href="#">По цене</a>
@@ -254,6 +254,7 @@
             </ul>
           </nav>
         </div>
+      </div>
       </section>
 
       <section class="contacts">
@@ -261,27 +262,29 @@
           <h2 class="visually-hidden">Контактная информация</h2>
           <img src="img/map.png" width="1440" height="416" alt="Карта">
           <!--Маркер-->
-          <img src="img/map-marker.png" width="231" height="190" alt="Маркер">
+          <img class="map-marker-img" src="img/map-marker.png" width="231" height="190" alt="Маркер">
           <div class="contact-info">
-            <h3>N&Euml;rds design studio</h3>
+            <h3 class="contact-info-title">N&Euml;rds design studio</h3>
             <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
-            <p><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
+            <p class="contact-tel"><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
             <a class="button contact-info-button button-wide" href="#">Напишите нам</a>
           </div>
         </div>
       </section>
       <section class="feedback">
-        <h2>Напишите нам</h2>       
+        <h2 class="feedback-form-title">Напишите нам</h2>       
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="field">            
+          <div class="feedback-form-fields">
+          <p class="field field-name">            
             <label class="field-label" for="appointment-name">Ваше имя:</label>
             <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
-          <p class="field">
+          <p class="field field-email">
             <label class="field-label" for="appointment-email">Ваш email:</label>
             <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com">
           </p>
-          <p class="field">
+        </div>
+          <p class="field field-textarea">
             <label class="field-label" for="message-field">Текст письма:</label>
             <textarea class="field-input" id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме"></textarea>
           </p>
@@ -308,8 +311,8 @@
           </ul>
         </section>
         <div class="main-footer-text">
-          <h3>Давайте дружить, это выгодно!</h3>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
+          <h3 class="main-footer-slog">Давайте дружить, это выгодно!</h3>
+          <p class="main-footer-discount">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
     </footer>

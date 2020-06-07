@@ -204,7 +204,7 @@ img {
   padding-left: 25px; /для иконки/
 */
 
-.site-navigation .active-page {
+.site-navigation-item .active-page {
   border-bottom: 2px solid var(--button-color-red);
   padding-bottom: 8px;
 }

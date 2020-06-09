@@ -52,7 +52,9 @@
               </li>
             </ul>
             <div class="slider-switches">
-              <span></span><span></span><span></span>
+              <span class="slider-switch"></span>
+              <span class="slider-switch"></span>
+              <span class="slider-switch"></span>
             </div>
           </div>
         </section>
@@ -65,8 +67,8 @@
               <article class="service-card">
                 <img class="service-card-img" src="img/illustration-1.png" width="300" height="146" alt="Веб-сайты">
                 <h3 class="service-card-title">Веб-сайты</h3>
-                <p class="service-text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                <a class="button service-card-button-red button-wide" href="#">Заказать</a>
+                <p class="service-card-text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+                <a class="button button-red" href="#">Заказать</a>
               </article>
             </li>
         
@@ -74,8 +76,8 @@
               <article class="service-card">
                 <img class="service-card-img" src="img/illustration-2.png" width="300" height="146" alt="Приложения">
                 <h3 class="service-card-title">Приложения</h3>
-                <p class="service-text">Покорите топ-10 приложений в AppStore и Google Play</p>
-                <a class="button service-card-button-green button-wide" href="#">Заказать</a>
+                <p class="service-card-text">Покорите топ-10 приложений в AppStore и Google Play</p>
+                <a class="button button-green" href="#">Заказать</a>
               </article>
             </li>
         
@@ -83,8 +85,8 @@
               <article class="service-card">
                 <img class="service-card-img" src="img/illustration-3.png" width="300" height="146" alt="Презентации">
                 <h3 class="service-card-title">Презентации</h3>
-                <p class="service-text">Вы даже не подозреваете, насколько вы изумительны!</p>
-                <a class="button service-card-button-yellow button-wide" href="#">Заказать</a>
+                <p class="service-card-text">Вы даже не подозреваете, насколько вы изумительны!</p>
+                <a class="button button-yellow" href="#">Заказать</a>
               </article>
             </li>
            </ul>
@@ -93,7 +95,7 @@
 
       <div class="studio-statistics">
         <div class="inner">
-        <section class="about-studio">
+          <section class="about-studio">
           
             <h2 class="visually-hidden">О компании</h2>
             <p class="about-studio-title">Мы&nbsp;&mdash; маленькая, но&nbsp;гордая дизайн-студия из&nbsp;Краснодара.</p>
@@ -113,9 +115,9 @@
               </li>
             </ul>
           
-        </section>
+          </section>
         
-        <section class="statistics">
+          <section class="statistics">
           
             <h2 class="visually-hidden">Показатели</h2>
             <img class="statistics-main-logo" src="img/nerds-illustration.png" width="360" height="208" alt="Логотип студии">
@@ -135,32 +137,31 @@
               </li>
             </ul>
           
-        </section>
+          </section></div>
       </div>
       
-
       <section class="partners">
         <div class="inner">
           <h2 class="visually-hidden">Партнеры</h2>
           <ul class="partners-list">
             <li class="partners-item">
               <a href="https://htmlacademy.ru/intensive/htmlcss">
-                <img src="img/logo-1-1.png" width="199" height="68" alt="HTML Academy">
+                <img class="partner-logo" src="img/logo-1-1.png" width="199" height="68" alt="HTML Academy">
               </a>
             </li>
             <li class="partners-item">
               <a href="#">
-                <img src="img/logo-2-2.png" width="209" height="90" alt="Барбершоп">
+                <img class="partner-logo" src="img/logo-2-2.png" width="209" height="90" alt="Барбершоп">
               </a>
             </li>
             <li class="partners-item">
               <a href="#">
-                <img src="img/logo-3-3.png" width="185" height="52" alt="PINK">
+                <img class="partner-logo" src="img/logo-3-3.png" width="185" height="52" alt="PINK">
               </a>
             </li>
             <li class="partners-item">
               <a href="#">
-                <img src="img/logo-4-4.png" width="173" height="84" alt="MISHKA">
+                <img class="partner-logo" src="img/logo-4-4.png" width="173" height="84" alt="MISHKA">
               </a>
             </li>
           </ul>
@@ -168,40 +169,20 @@
       </section>
 
       <section class="contacts">
+        <img class="contact-map-img" src="img/map.png" width="1440" height="416" alt="Карта">
         <div class="inner">
-          <h2 class="visually-hidden">Контактная информация</h2>
-          <img src="img/map.png" width="1440" height="416" alt="Карта">
+        <h2 class="visually-hidden">Контактная информация</h2>
           <!--Маркер-->
           <img class="map-marker-img" src="img/map-marker.png" width="231" height="190" alt="Маркер">
           <div class="contact-info">
             <h3 class="contact-info-title">N&Euml;rds design studio</h3>
             <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
             <p class="contact-tel"><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
-            <a class="button contact-info-button button-wide" href="#">Напишите нам</a>
+            <a class="button contact-info-button" href="#">Напишите нам</a>
           </div>
         </div>
       </section>
-      <section class="feedback">
-        <h2 class="feedback-form-title">Напишите нам</h2>       
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="feedback-form-fields">
-          <p class="field field-name">            
-            <label class="field-label" for="appointment-name">Ваше имя:</label>
-            <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
-          </p>
-          <p class="field field-email">
-            <label class="field-label" for="appointment-email">Ваш email:</label>
-            <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com">
-          </p>
-        </div>
-          <p class="field field-textarea">
-            <label class="field-label" for="message-field">Текст письма:</label>
-            <textarea class="field-input" id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме"></textarea>
-          </p>
-          <button type="submit" class="button feedback-button">Отправить</button>
-        </form>
-        <button type="button" class="close-button" aria-label="Закрыть"></button>
-      </section>
+      
     </main>
 
     <footer class="main-footer">
@@ -210,13 +191,13 @@
           <h3 class="visually-hidden">Соцсети</h3>
           <ul class="social-list">
            <li class="social-item">
-              <a class="social-link" href="#"><span class="visually-hidden">Vkontakte</span></a>
+              <a class="social-link social-link-vk" href="#"><span class="visually-hidden">Vkontakte</span></a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="#"><span class="visually-hidden">Facebook</span></a>
+              <a class="social-link social-link-fb" href="#"><span class="visually-hidden">Facebook</span></a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="#"><span class="visually-hidden">Instagram</span></a>
+              <a class="social-link social-link-insta" href="#"><span class="visually-hidden">Instagram</span></a>
             </li>
           </ul>
         </section>
@@ -226,5 +207,28 @@
         </div>
       </div>
     </footer>
+
+    <section class="feedback">
+        <h2 class="feedback-form-title">Напишите нам</h2>       
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="feedback-form-fields">
+          <p class="field">            
+            <label class="field-label" for="appointment-name">Ваше имя:</label>
+            <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="field">
+            <label class="field-label" for="appointment-email">Ваш email:</label>
+            <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com">
+          </p>
+        </div>
+          <p class="field">
+            <label class="field-label" for="message-field">Текст письма:</label>
+            <textarea class="field-input" id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме"></textarea>
+          </p>
+          <button type="submit" class="button feedback-button">Отправить</button>
+        </form>
+        <button type="button" class="close-button" aria-label="Закрыть"></button>
+    </section>
+
   </body>
 </html>

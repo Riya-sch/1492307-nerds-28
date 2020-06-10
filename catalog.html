@@ -97,7 +97,7 @@
                   </li>
                  </ul>
               </fieldset>
-              <button class="button filter-button button-wide" type="submit">Показать</button>
+              <button class="button filter-button" type="submit">Показать</button>
             </form>
           </section>
 
@@ -115,10 +115,12 @@
                 <li class="sorting-item">
                   <a href="#">По названию</a>
                 </li>
-                <li class="sorting-item">
+              </ul>
+              <ul class="sorting-buttons-list">
+                <li class="sorting-button">
                   <a class="button-down" href="#"><span class="visually-hidden">По убыванию</span></a>
                 </li>
-                <li class="sorting-item">
+                <li class="sorting-button">
                   <a class="button-up" href="#"><span class="visually-hidden">По возрастанию</span></a>
                 </li>
               </ul>        
@@ -237,7 +239,7 @@
                 <li class="pagination-item">
                   <a class="pagination-link" href="/previous-page">Предыдущая</a>
                 </li>
-                <li class="pagination-active">
+                <li class="pagination-item pagination-active">
                   <a class="pagination-link-active" href="/page-1">1</a>
                 </li>
                 <li class="pagination-item">
@@ -247,10 +249,11 @@
                   <a class="pagination-link" href="/page-3">3</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="/next-page" class="disabled">Следующая</a>
+                  <a class="pagination-link disabled" href="/next-page">Следующая</a>
                   </li>
                </ul>
             </nav>
+        </div>
         </div>
       </div>
        
@@ -286,9 +289,9 @@
             </li>
           </ul>
         </section>
-        <div class="main-footer-text">
-          <h3 class="main-footer-slog">Давайте дружить, это выгодно!</h3>
-          <p class="main-footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+        <div class="main-footer-slogan">
+          <h3 class="footer-slogan-title">Давайте дружить, это выгодно!</h3>
+          <p class="footer-slogan-text">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
     </footer>
@@ -297,22 +300,22 @@
       <h2 class="feedback-form-title">Напишите нам</h2>       
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="feedback-form-fields">
-        <p class="field field-name">            
+        <p class="field">            
           <label class="field-label" for="appointment-name">Ваше имя:</label>
-          <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
         </p>
-        <p class="field field-email">
+        <p class="field">
           <label class="field-label" for="appointment-email">Ваш email:</label>
-          <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com">
+          <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com" required>
         </p>
       </div>
-        <p class="field field-textarea">
+        <p class="field">
           <label class="field-label" for="message-field">Текст письма:</label>
-          <textarea class="field-input" id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме"></textarea>
+          <textarea class="field-input" id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме" required></textarea>
         </p>
         <button type="submit" class="button feedback-button">Отправить</button>
       </form>
       <button type="button" class="close-button" aria-label="Закрыть"></button>
-    </section>
+  </section>
   </body>
 </html>

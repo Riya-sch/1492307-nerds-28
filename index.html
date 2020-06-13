@@ -49,7 +49,7 @@
               </li>
             </ul>
             <div class="slider-switches">
-              <button class="slider-switch current" type="button" aria-label="Первый слайд"></button>
+              <button class="slider-switch current-switch" type="button" aria-label="Первый слайд"></button>
               <button class="slider-switch" type="button" aria-label="Второй слайд"></button>
               <button class="slider-switch" type="button" aria-label="Третий слайд"></button>
             </div>
@@ -93,7 +93,6 @@
       <div class="studio-statistics">
         <div class="inner">
           <section class="about-studio">
-          
             <h2 class="visually-hidden">О компании</h2>
             <p class="about-studio-title">Мы&nbsp;&mdash; маленькая, но&nbsp;гордая дизайн-студия из&nbsp;Краснодара.</p>
               <p class="about-studio-text">
@@ -111,11 +110,9 @@
                Слайдшоу и видео для корпоративных презентаций
               </li>
             </ul>
-          
           </section>
         
           <section class="statistics">
-          
             <h2 class="visually-hidden">Показатели</h2>
             <img class="statistics-main-logo" src="img/nerds-illustration.png" width="360" height="208" alt="Логотип студии">
             <h3 class="percent-list-title">С 2004 года любим точность во всем:</h3>
@@ -133,7 +130,6 @@
                 <p class="percent-description">Минимальная предоплата</p>
               </li>
             </ul>
-          
           </section>
         </div>
       </div>
@@ -169,8 +165,9 @@
       <section class="contacts">
         <div class="inner">
         <h2 class="visually-hidden">Контактная информация</h2>
-          <!--Маркер-->
-          <img class="map-marker-img" src="img/map-marker.png" width="231" height="190" alt="Маркер">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.59711710512!2d38.269995651551724!3d55.419983666983484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a9115eaed6e1f%3A0x706f4c659200418b!2z0YPQuy4g0JrQvtC90Y7RiNC10L3QvdCw0Y8sIDE5LCDQkdGA0L7QvdC90LjRhtGLLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNDAxNzA!5e0!3m2!1sru!2sru!4v1591957918857!5m2!1sru!2sru" height="416" allowfullscreen title="Офис студии по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        </iframe>
+        <img class="map-marker-img" src="img/map-marker.png" width="231" height="190" alt="Маркер">
           <div class="contact-info">
             <h3 class="contact-info-title">N&Euml;rds design studio</h3>
             <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
@@ -179,7 +176,6 @@
           </div>
         </div>
       </section>
-      
     </main>
 
     <footer class="main-footer">
@@ -205,7 +201,7 @@
       </div>
     </footer>
 
-    <section class="modal-feedback active">
+    <section class="modal-feedback modal-active">
         <h2 class="feedback-form-title">Напишите нам</h2>       
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="feedback-form-fields">
@@ -226,6 +222,6 @@
         </form>
         <button type="button" class="close-button" aria-label="Закрыть"></button>
     </section>
-
+    <script src="modal-feedback.js"></script>
   </body>
 </html>

@@ -5,10 +5,10 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body class="page-body">
 
+  <body class="page-body">
     <header class="main-header">
       <div class="inner">
         <nav class="main-navigation">
@@ -95,7 +95,7 @@
                     <input class="checkbox-input visually-hidden" type="checkbox" name="basket" id="filter-basket">
                     <label class="checkbox-label" for="filter-basket">Корзина</label>
                   </li>
-                 </ul>
+                </ul>
               </fieldset>
               <button class="button filter-button" type="submit">Показать</button>
             </form>
@@ -106,19 +106,21 @@
             <h3 class="sorting-list-title">Сортировать:</h3>
               <ul class="sorting-list">
                 <li class="sorting-item">
-                  <a href="#">По цене</a>
+                  <a class="sorting-link" href="#">По цене</a>
                 </li>
                 <li class="sorting-item">
-                  <a href="#">По типу</a>
+                  <a class="sorting-link" href="#">По типу</a>
                 </li>
                 <li class="sorting-item">
-                  <a href="#">По названию</a>
+                  <a class="sorting-link" href="#">По названию</a>
                 </li>
-                <li class="sorting-item sorting-button">
-                  <a class="button-down" href="#"><span class="visually-hidden">По убыванию</span></a>
+              </ul>
+              <ul class="sorting-list-buttons">
+                <li class="sorting-button">
+                  <a class="button-down-link" href="#"><span class="visually-hidden">По убыванию</span></a>
                 </li>
-                <li class="sorting-item sorting-button">
-                  <a class="button-up" href="#"><span class="visually-hidden">По возрастанию</span></a>
+                <li class="sorting-button">
+                  <a class="button-up-link" href="#"><span class="visually-hidden">По возрастанию</span></a>
                 </li>
               </ul>
             </section>
@@ -128,11 +130,11 @@
               <ul class="catalog-list">
                 <li class="catalog-item">
                   <article class="catalog-card">
-                    <a href="#">
+                    <a class="catalog-card-link" href="#">
                       <img class="catalog-card-img" src="img/img-sedona.jpg" width="360" height="576" alt="Шаблон Седона">
                     </a>
                     <div class="catalog-card-content">
-                      <h3 class="catalog-card-title"><a href="#">Sedona</a></h3>
+                      <h3 class="catalog-card-title"><a class="catalog-title-link" href="#">Sedona</a></h3>
                       <p class="catalog-card-desc">Информационный сайт<br>для туристов</p>
                       <a class="button price-button" href="#">9&nbsp;900&nbsp;₽</a>
                     </div>
@@ -140,11 +142,11 @@
                 </li>
                 <li class="catalog-item">
                   <article class="catalog-card">
-                    <a href="#">
+                    <a class="catalog-card-link" href="#">
                       <img class="catalog-card-img" src="img/img-pink.jpg" width="358" height="578" alt="Шаблон Пинк">
                     </a>
                     <div class="catalog-card-content">
-                      <h3 class="catalog-card-title"><a href="#">Pink app</a></h3>
+                      <h3 class="catalog-card-title"><a class="catalog-title-link" href="#">Pink app</a></h3>
                       <p class="catalog-card-desc">Продуктовый лендинг<br>приложения для iOS и Android</p>
                       <a class="button price-button" href="#">9&nbsp;900&nbsp;₽</a>
                     </div>
@@ -152,11 +154,11 @@
                 </li>
                 <li class="catalog-item">
                   <article class="catalog-card">
-                    <a href="#">
+                    <a class="catalog-card-link" href="#">
                       <img class="catalog-card-img" src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон Барбершоп">
                     </a>
                     <div class="catalog-card-content">
-                      <h3 class="catalog-card-title"><a href="#">Barbershop</a></h3>
+                      <h3 class="catalog-card-title"><a class="catalog-title-link" href="#">Barbershop</a></h3>
                       <p class="catalog-card-desc">Сайт салона красоты.<br>Для мужчин, да.</p>
                      <a class="button price-button" href="#">9&nbsp;900&nbsp;₽</a>
                     </div>
@@ -164,11 +166,11 @@
                 </li>
                 <li class="catalog-item">
                   <article class="catalog-card">
-                    <a href="#">
+                    <a class="catalog-card-link" href="#">
                      <img class="catalog-card-img" src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон Мишка">
                     </a>
                     <div class="catalog-card-content">
-                      <h3 class="catalog-card-title"><a href="#">Mishka</a></h3>
+                      <h3 class="catalog-card-title"><a class="catalog-title-link" href="#">Mishka</a></h3>
                       <p class="catalog-card-desc">Интернет-магазин<br>вязаных игрушек</p>
                       <a class="button price-button" href="#">9&nbsp;900&nbsp;₽</a>
                     </div>
@@ -176,11 +178,11 @@
                 </li>
                 <li class="catalog-item">
                   <article class="catalog-card">
-                    <a href="#">
+                    <a class="catalog-card-link" href="#">
                       <img class="catalog-card-img" src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон Аплюс">
                     </a>
                     <div class="catalog-card-content">
-                      <h3 class="catalog-card-title"><a href="#">A plus</a></h3>
+                      <h3 class="catalog-card-title"><a class="catalog-title-link" href="#">A plus</a></h3>
                       <p class="catalog-card-desc">Лендинг курсов повышения<br>квалификации</p>
                       <a class="button price-button" href="#">9&nbsp;900&nbsp;₽</a>
                     </div>
@@ -188,11 +190,11 @@
                 </li>
                 <li class="catalog-item">
                   <article class="catalog-card">
-                    <a href="#">
+                    <a class="catalog-card-link" href="#">
                       <img class="catalog-card-img" src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон Кваст">
                     </a>
                     <div class="catalog-card-content">
-                      <h3 class="catalog-card-title"><a href="#">Кваст</a></h3>
+                      <h3 class="catalog-card-title"><a class="catalog-title-link" href="#">Кваст</a></h3>
                       <p class="catalog-card-desc">Промо-сайт производителя<br>крафтового кваса</p>
                       <a class="button price-button" href="#">9&nbsp;900&nbsp;₽</a>
                     </div>
@@ -212,7 +214,7 @@
                 <li class="pagination-item">
                   <a class="pagination-link" href="/page-3" aria-label="Третья страница">3</a>
                 </li>
-                <li class="pagination-item ">
+                <li class="pagination-item">
                   <a class="pagination-link next-page-link" href="/next-page" aria-label="Следующая страница">Следующая</a>
                   </li>
                </ul>
@@ -224,8 +226,7 @@
       <section class="contacts">
         <div class="inner">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.59711710512!2d38.269995651551724!3d55.419983666983484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a9115eaed6e1f%3A0x706f4c659200418b!2z0YPQuy4g0JrQvtC90Y7RiNC10L3QvdCw0Y8sIDE5LCDQkdGA0L7QvdC90LjRhtGLLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNDAxNzA!5e0!3m2!1sru!2sru!4v1591957918857!5m2!1sru!2sru" height="416" allowfullscreen title="Офис студии по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.59711710512!2d38.269995651551724!3d55.419983666983484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a9115eaed6e1f%3A0x706f4c659200418b!2z0YPQuy4g0JrQvtC90Y7RiNC10L3QvdCw0Y8sIDE5LCDQkdGA0L7QvdC90LjRhtGLLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNDAxNzA!5e0!3m2!1sru!2sru!4v1591957918857!5m2!1sru!2sru" height="416" allowfullscreen title="Офис студии по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
           <img class="map-marker-img" src="img/map-marker.png" width="231" height="190" alt="Маркер">
           <div class="contact-info">
             <h3 class="contact-info-title">N&Euml;rds design studio</h3>
@@ -260,19 +261,19 @@
       </div>
     </footer>
 
-    <section class="modal-feedback modal-active">
+    <section class="modal-feedback">
       <h2 class="feedback-form-title">Напишите нам</h2>       
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="feedback-form-fields">
-        <p class="field">            
-          <label class="field-label" for="appointment-name">Ваше имя:</label>
-          <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
-        </p>
-        <p class="field">
-          <label class="field-label" for="appointment-email">Ваш email:</label>
-          <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com" required>
-        </p>
-      </div>
+          <p class="field">
+            <label class="field-label" for="appointment-name">Ваше имя:</label>
+            <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
+          </p>
+          <p class="field">
+            <label class="field-label" for="appointment-email">Ваш email:</label>
+            <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com" required>
+          </p>
+        </div>
         <p class="field">
           <label class="field-label" for="message-field">Текст письма:</label>
           <textarea class="field-input" id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме" required></textarea>
@@ -280,7 +281,8 @@
         <button type="submit" class="button feedback-button">Отправить</button>
       </form>
       <button type="button" class="close-button" aria-label="Закрыть"></button>
-  </section>
-  <script src="modal-feedback.js"></script>
+    </section>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>

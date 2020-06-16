@@ -5,10 +5,10 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body class="page-body">
 
+  <body class="page-body">
     <header class="main-header">
       <div class="inner">
         <nav class="main-navigation">
@@ -26,67 +26,67 @@
       </div>
     </header>
 
-    <section class="contacts">
-      <div class="inner">
-      <h2 class="visually-hidden">Контактная информация</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.59711710512!2d38.269995651551724!3d55.419983666983484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a9115eaed6e1f%3A0x706f4c659200418b!2z0YPQuy4g0JrQvtC90Y7RiNC10L3QvdCw0Y8sIDE5LCDQkdGA0L7QvdC90LjRhtGLLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNDAxNzA!5e0!3m2!1sru!2sru!4v1591957918857!5m2!1sru!2sru" width="100%" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        
+    <main>
+      <section class="contacts">
+        <div class="inner">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.59711710512!2d38.269995651551724!3d55.419983666983484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a9115eaed6e1f%3A0x706f4c659200418b!2z0YPQuy4g0JrQvtC90Y7RiNC10L3QvdCw0Y8sIDE5LCDQkdGA0L7QvdC90LjRhtGLLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNDAxNzA!5e0!3m2!1sru!2sru!4v1591957918857!5m2!1sru!2sru" width="100%" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <img class="map-marker-img" src="img/map-marker.png" width="231" height="190" alt="Маркер">
-        <div class="contact-info">
-          <h3 class="contact-info-title">N&Euml;rds design studio</h3>
-          <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
-          <p class="contact-tel"><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
-          <a class="button contact-info-button" href="#">Напишите нам</a>
+          <div class="contact-info">
+            <h3 class="contact-info-title">N&Euml;rds design studio</h3>
+            <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
+            <p class="contact-tel"><a class="tel" href="+78122757575">тел. +7 (812) 275-75-75</a></p>
+            <a class="button contact-info-button" href="#">Напишите нам</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="inner">
+        <section class="social">
+          <h3 class="visually-hidden">Соцсети</h3>
+          <ul class="social-list">
+            <li class="social-item">
+              <a class="social-link social-link-vk" href="#"><span class="visually-hidden">Vkontakte</span></a>
+            </li>
+            <li class="social-item">
+              <a class="social-link social-link-fb" href="#"><span class="visually-hidden">Facebook</span></a>
+            </li>
+            <li class="social-item">
+              <a class="social-link social-link-insta" href="#"><span class="visually-hidden">Instagram</span></a>
+            </li>
+          </ul>
+        </section>
+        <div class="main-footer-slogan">
+          <h3 class="footer-slogan-title">Давайте дружить, это выгодно!</h3>
+          <p class="footer-slogan-text">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
-    </section>
-    
-  </main>
+    </footer>
 
-  <footer class="main-footer">
-    <div class="inner">
-      <section class="social">
-        <h3 class="visually-hidden">Соцсети</h3>
-        <ul class="social-list">
-         <li class="social-item">
-            <a class="social-link social-link-vk" href="#"><span class="visually-hidden">Vkontakte</span></a>
-          </li>
-          <li class="social-item">
-            <a class="social-link social-link-fb" href="#"><span class="visually-hidden">Facebook</span></a>
-          </li>
-          <li class="social-item">
-            <a class="social-link social-link-insta" href="#"><span class="visually-hidden">Instagram</span></a>
-          </li>
-        </ul>
-      </section>
-      <div class="main-footer-slogan">
-        <h3 class="footer-slogan-title">Давайте дружить, это выгодно!</h3>
-        <p class="footer-slogan-text">Скидка 10% для друзей из социальных сетей.</p>
-      </div>
-    </div>
-  </footer>
-
-  <section class="modal-feedback active">
-      <h2 class="feedback-form-title">Напишите нам</h2>       
+    <section class="modal-feedback">
+      <h2 class="feedback-form-title">Напишите нам</h2>    
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="feedback-form-fields">
-        <p class="field">            
-          <label class="field-label" for="appointment-name">Ваше имя:</label>
-          <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
-        </p>
-        <p class="field">
-          <label class="field-label" for="appointment-email">Ваш email:</label>
-          <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com" required>
-        </p>
-      </div>
+          <p class="field">            
+            <label class="field-label" for="appointment-name">Ваше имя:</label>
+            <input class="field-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
+          </p>
+          <p class="field">
+            <label class="field-label" for="appointment-email">Ваш email:</label>
+            <input class="field-input" id="appointment-email" type="email" name="email" placeholder="email@example.com" required>
+          </p>
+        </div>
         <p class="field">
           <label class="field-label" for="message-field">Текст письма:</label>
           <textarea class="field-input" id="message-field" name="message" rows="5" cols="100" placeholder="В свободной форме" required></textarea>
-        </p>
-        <button type="submit" class="button feedback-button">Отправить</button>
+          </p>
+          <button type="submit" class="button feedback-button">Отправить</button>
       </form>
       <button type="button" class="close-button" aria-label="Закрыть"></button>
-  </section>
-  <script src="modal-feedback.js"></script>
-</body>
+    </section>
+
+    <script src="js/script.min.js"></script>
+  </body>
 </html>

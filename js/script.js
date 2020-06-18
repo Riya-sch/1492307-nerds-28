@@ -1,48 +1,39 @@
-
-var modalLink = document.querySelector(".contact-info-button");
+var modalOpen = document.querySelector(".contact-info-button");
 var modalFeedback = document.querySelector(".modal-feedback");
-var modalClose = document.querySelector(".close-button");
+var modalClose = modalFeedback.querySelector(".close-button");
 var modalForm = modalFeedback.querySelector(".feedback-form");
 var modalLogin = modalFeedback.querySelector("[name=name]");
 var modalEmail = modalFeedback.querySelector("[name=email]");
 var modalMessage = modalFeedback.querySelector("[name=message]");
-
 var isStorageSupport = true;
-var storage = "";
+var storageName = "";
+var storageEmail = "";
 
 try {
-    storage = localStorage.getItem("name");
-}   catch (err) {
+    storageName = localStorage.getItem("name");
+    storageEmail = localStorage.getItem("email");
+} catch (err) {
     isStorageSupport = false;
 }
 
-modalLink.addEventListener("click", function (evt) {
+modalOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalFeedback.classList.add("modal-active");
     modalLogin.focus();
 
-    if (storage) {
-        modalLogin.value = storage;
+    if (storageName) {
+        modalLogin.value = storageName;
         modalEmail.focus();
     } else {
         modalLogin.focus();
     }
-    modalPassword.focus();
-    if (storage) {
-        modalPassword.value = storage;
+    if (storageEmail) {
+        modalEmail.value = storageEmail;
         modalMessage.focus();
-    } else {
-        modalEmail.focus();
     }
 
 });
 
-modalClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modalFeedback.classList.remove("modal-active");
-    modalFeedback.classList.remove("modal-error");
-});
-  
 modalForm.addEventListener("submit", function (evt) {
     if (!modalLogin.value || !modalEmail.value || !modalMessage.value) {
         evt.preventDefault();
@@ -55,6 +46,12 @@ modalForm.addEventListener("submit", function (evt) {
             localStorage.setItem("email", modalEmail.value);
         }
     }
+});
+
+modalClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalFeedback.classList.remove("modal-active");
+    modalFeedback.classList.remove("modal-error");
 });
 
 window.addEventListener("keydown", function (evt) {
